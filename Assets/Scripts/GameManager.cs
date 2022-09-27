@@ -20,7 +20,6 @@ public class GameManager : MonoBehaviour
         player.SetBool("IsDead", false);
         Angel.SetActive(false);
         Text.SetActive(false);
-        
     }
 
     void Update()
@@ -39,7 +38,6 @@ public class GameManager : MonoBehaviour
 
         }
     }
-
     void SpawnPolice()
     {
         Instantiate(PoliceLeft, new Vector3(60f, -2f, 0f), Quaternion.identity);

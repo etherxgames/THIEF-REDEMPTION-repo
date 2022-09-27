@@ -3,7 +3,18 @@ guid: b978507a5f8e28d4d982a5a67efb61c1
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - PlayerHealth: {instanceID: 0}
+  - PoliceLeft: {instanceID: 0}
+  - PoliceRight: {instanceID: 0}
+  - Player: {instanceID: 0}
+  - Angel: {instanceID: 0}
+  - Text: {instanceID: 0}
+  - player: {instanceID: 0}
+  - angel: {instanceID: 0}
+  - text: {instanceID: 0}
+  - ReturnTOMenuUI: {fileID: 3145380067651650284, guid: 661a59d454e9af842a4496329b2d5c0c, type: 3}
+  - PauseMenuUI: {fileID: 1179422112573831226, guid: 4dd659b8514b9204095cae9a47bbba27, type: 3}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 
