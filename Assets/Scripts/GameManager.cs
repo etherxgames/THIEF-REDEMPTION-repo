@@ -1,20 +1,43 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
+    public PlayerHealth PlayerHealth;
     public GameObject PoliceLeft;
     public GameObject PoliceRight;
+    public GameObject Player;
+    public GameObject Angel;
+    public GameObject Text;
+    public Animator player;
+    public Animator angel;
+    public Animator text;
     void Start()
     {
         Invoke("SpawnPolice", 10f);
+        player.SetBool("IsDead", false);
+        Angel.SetActive(false);
+        Text.SetActive(false);
         
     }
 
     void Update()
     {
-        
+        if(PlayerHealth.isDead == true)
+        {
+            player.SetBool("IsDead", true);
+            Player.GetComponent<PlayerController>().enabled = false;
+            Player.GetComponent<PlayerCombat>().enabled = false;
+            Angel.SetActive(true);
+            Text.SetActive(true);
+            if(Input.GetKeyDown(KeyCode.Return))
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            }
+
+        }
     }
 
     void SpawnPolice()
