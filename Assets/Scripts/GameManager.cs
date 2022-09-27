@@ -16,8 +16,8 @@ public class GameManager : MonoBehaviour
     public Animator text;
     void Start()
     {
-        Invoke("SpawnPolice", 10f);
         player.SetBool("IsDead", false);
+        Invoke("SpawnPolice", 10f);
         Angel.SetActive(false);
         Text.SetActive(false);
     }
@@ -41,7 +41,7 @@ public class GameManager : MonoBehaviour
     void SpawnPolice()
     {
         Instantiate(PoliceLeft, new Vector3(60f, -2f, 0f), Quaternion.identity);
-        Instantiate(PoliceLeft, new Vector3(50f, -2f, 0f), Quaternion.identity);
+        Instantiate(PoliceRight, new Vector3(50f, -2f, 0f), Quaternion.identity);
         Instantiate(PoliceRight, new Vector3(40f, -2f, 0f), Quaternion.identity);
         Instantiate(PoliceRight, new Vector3(30f, -2f, 0f), Quaternion.identity);
         Instantiate(PoliceRight, new Vector3(20f, -2f, 0f), Quaternion.identity);
