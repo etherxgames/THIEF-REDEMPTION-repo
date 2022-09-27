@@ -30,7 +30,7 @@ public class PoliceBehavior : MonoBehaviour
                 {
                     players[i].GetComponent<PlayerHealth>().TakeDamage(damage);
                 }
-                nextAttackTime = Time.time + 1f / attackRate;
+                nextAttackTime = Time.time + 4f / attackRate;
             }
         }
     }

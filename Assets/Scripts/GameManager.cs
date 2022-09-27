@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public GameObject Police;
+    public GameObject PoliceLeft;
+    public GameObject PoliceRight;
     void Start()
     {
         Invoke("SpawnPolice", 10f);
@@ -18,18 +19,12 @@ public class GameManager : MonoBehaviour
 
     void SpawnPolice()
     {
-        Instantiate(Police, new Vector3(60f, -2f, 0f), Quaternion.identity);
-        this.Flip();
-        Instantiate(Police, new Vector3(50f, -2f, 0f), Quaternion.identity);
-        
-        Instantiate(Police, new Vector3(40f, -2f, 0f), Quaternion.identity);
+        Instantiate(PoliceLeft, new Vector3(60f, -2f, 0f), Quaternion.identity);
+        Instantiate(PoliceLeft, new Vector3(50f, -2f, 0f), Quaternion.identity);
+        Instantiate(PoliceRight, new Vector3(40f, -2f, 0f), Quaternion.identity);
+        Instantiate(PoliceRight, new Vector3(30f, -2f, 0f), Quaternion.identity);
+        Instantiate(PoliceRight, new Vector3(20f, -2f, 0f), Quaternion.identity);
+        Instantiate(PoliceRight, new Vector3(10f, -2f, 0f), Quaternion.identity);
+        Instantiate(PoliceLeft, new Vector3(0f, -2f, 0f), Quaternion.identity);
     }
-
-    void Flip()
-    {
-        Vector2 currentScale = transform.localScale;
-        currentScale.x *= -1;
-        transform.localScale = currentScale;
-    }
-
 }
