@@ -10,7 +10,7 @@ public class PlayerController : MonoBehaviour
     public Animator _animate;
     Rigidbody2D _rb;
     [SerializeField] float _playerSpeed = 1700f;
-    [SerializeField] float _jumpPower = 80f;
+    [SerializeField] float _jumpPower = 100f;
 
 
     void Start()
