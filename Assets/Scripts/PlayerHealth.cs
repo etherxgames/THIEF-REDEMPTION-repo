@@ -7,12 +7,12 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth = 20f;
     public float currentHealth;
     public HealthBar healthBar;
+    public bool isDead = false;
     void Start()
     {
         currentHealth = maxHealth;
         healthBar.SetMaxHealth(maxHealth);
     }
-
     public void TakeDamage(int damage)
     {
         currentHealth -= damage;
@@ -22,6 +22,8 @@ public class PlayerHealth : MonoBehaviour
 
     void Update()
     {
+        if (currentHealth == 0)
+            isDead = true;
     }
 
 }
