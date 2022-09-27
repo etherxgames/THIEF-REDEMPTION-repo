@@ -19,7 +19,7 @@ public class EnemyHealth : MonoBehaviour
     {
         currentHealth -= damage;
         healthBar.SetHealth(currentHealth);
-        if (currentHealth == 0)
+        if (currentHealth <= 0)
         {
             gameObject.SetActive(false);
         }
