@@ -9,8 +9,8 @@ public class PlayerController : MonoBehaviour
     bool isGrounded;
     public Animator _animate;
     Rigidbody2D _rb;
-    [SerializeField] float _playerSpeed = 1700f;
-    [SerializeField] float _jumpPower = 100f;
+    [SerializeField] float _playerSpeed = 1800f;
+    [SerializeField] float _jumpPower = 110f;
 
 
     void Start()
