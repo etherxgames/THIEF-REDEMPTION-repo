@@ -248,8 +248,8 @@ MonoBehaviour:
   - {fileID: 5754294690492626970}
   - {fileID: 5754294690535220336}
   m_Bounds:
-    m_Center: {x: 0.048226357, y: -1.5916972, z: 0}
-    m_Extent: {x: 2.1895823, y: 3.1484666, z: 0}
+    m_Center: {x: 0.048226357, y: -1.591697, z: 0}
+    m_Extent: {x: 2.1895823, y: 3.1484668, z: 0}
   m_UseBatching: 1
   m_AlwaysUpdate: 1
   m_AutoRebind: 0
@@ -302,7 +302,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 982e77716790f014b9dcd889b944946f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _animate: {fileID: 0}
+  _animate: {fileID: 1336979846934342487}
   _playerSpeed: 1800
   _jumpPower: 100
 --- !u!114 &5754294691063514739
@@ -317,7 +317,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4af1826c8480010489c61f3d2e7ba3b4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _rb: {fileID: 0}
+  _rb: {fileID: 5754294691063514750}
   maxHealth: 20
   currentHealth: 0
   healthBar: {fileID: 0}
@@ -380,7 +380,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3d4a22ce870651143885d8e6ccec3bc7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attackPos: {fileID: 0}
+  attackPos: {fileID: 8768335980672528188}
   attackRange: 4
   whatIsEnemies:
     serializedVersion: 2
