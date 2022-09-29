@@ -2,34 +2,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Key : MonoBehaviour
+public class Key2 : MonoBehaviour
 {
-    public static bool hasKey = false;
+    public static bool hasKey2 = false;
 
     public GameObject KeyUI;
-    public GameObject Keyobject;
+    public GameObject Key_2;
 
     // Start is called before the first frame update
     void Start()
     {
         KeyUI.SetActive(false);
-        Keyobject.SetActive(true);
+        Key_2.SetActive(true);
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (hasKey)
+        if (hasKey2 && !Key1.hasKey1)
         {
             KeyUI.SetActive(true);
-            Keyobject.SetActive(false);
+            Key_2.SetActive(false);
         }
     }
     private void OnTriggerEnter2D(Collider2D other)
     {
-        if(other.tag == "Player" && Input.GetKeyDown(KeyCode.E))
+        if (other.tag == "Player" && !hasKey2 && !Key1.hasKey1)
         {
-            hasKey = true;
+            hasKey2 = true;
         }
     }
 }
