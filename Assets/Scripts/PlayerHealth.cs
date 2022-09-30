@@ -30,8 +30,8 @@ public class PlayerHealth : MonoBehaviour
     {
         if(collision.gameObject.tag == "Spikes")
         {
-            TakeDamage(5);
-            _rb.AddForce(new Vector2(-3f, 30f), ForceMode2D.Impulse);
+            TakeDamage(10);
+            _rb.AddForce(new Vector2(-30f, 300f), ForceMode2D.Impulse);
         }
     }
 

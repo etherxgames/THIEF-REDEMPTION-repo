@@ -9,8 +9,9 @@ public class PlayerController : MonoBehaviour
     bool isGrounded;
     public Animator _animate;
     Rigidbody2D _rb;
-    public float _playerSpeed = 55f;
-    public float _jumpPower = 510f;
+    public float _playerSpeed = 35f;
+    public float _jumpPower = 550f;
+    public AudioSource hop;
 
 
     void Start()
@@ -38,6 +39,7 @@ public class PlayerController : MonoBehaviour
         if (isGrounded && Input.GetButtonDown("Jump"))
         {
             _rb.AddForce(new Vector2(0f, _jumpPower), ForceMode2D.Impulse);
+            hop.Play();
 
         }
         if (_rb.velocity.y < 0f && !isGrounded)
@@ -53,7 +55,7 @@ public class PlayerController : MonoBehaviour
         {
             _rb.velocity = new Vector2(move * _playerSpeed, _rb.velocity.y);
         }
-        else _rb.velocity = new Vector2(move * _playerSpeed / 1.7f, _rb.velocity.y);
+        else _rb.velocity = new Vector2(move * _playerSpeed / 1.5f, _rb.velocity.y);
     }
     void Flip()
     {
