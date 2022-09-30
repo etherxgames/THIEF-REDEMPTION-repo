@@ -17,7 +17,11 @@ public class GameManager2 : MonoBehaviour
     public bool won;
     public GameObject textMeshPro;
     public GameObject map;
+<<<<<<< Updated upstream
     public bool mapActive = false;
+=======
+    private bool mapActive;
+>>>>>>> Stashed changes
     
     void Start()
     {
@@ -29,6 +33,10 @@ public class GameManager2 : MonoBehaviour
         Invoke("deletemesh", 10f);
         Invoke("SpawnPolice", 40f);
         map.SetActive(false);
+<<<<<<< Updated upstream
+=======
+        mapActive = false;
+>>>>>>> Stashed changes
     }
     void deletemesh()
     {
@@ -57,7 +65,10 @@ public class GameManager2 : MonoBehaviour
         {
             map.SetActive(!mapActive);
             mapActive = !mapActive;
+<<<<<<< Updated upstream
             Time.timeScale = 0f;
+=======
+>>>>>>> Stashed changes
         }
     }
     public void SpawnPolice()
