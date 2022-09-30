@@ -10,16 +10,16 @@ public class GameManager : MonoBehaviour
     public GameObject PoliceRight;
     public GameObject Player;
     public GameObject Angel;
-    public GameObject Text;
+    public GameObject txt1;
+    public GameObject txt2;
     public Animator player;
-    public Animator angel;
-    public Animator text;
     void Start()
     {
         player.SetBool("IsDead", false);
         Invoke("SpawnPolice", 10f);
         Angel.SetActive(false);
-        Text.SetActive(false);
+        txt1.SetActive(false);
+        txt2.SetActive(false);
     }
 
     void Update()
@@ -30,7 +30,8 @@ public class GameManager : MonoBehaviour
             Player.GetComponent<PlayerController>().enabled = false;
             Player.GetComponent<PlayerCombat>().enabled = false;
             Angel.SetActive(true);
-            Text.SetActive(true);
+            txt1.SetActive(true);
+            txt2.SetActive(true);
             if(Input.GetKeyDown(KeyCode.Return))
             {
                 SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
