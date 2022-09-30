@@ -314,7 +314,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerHealth: {fileID: 5754294691038925873}
   PoliceLeft: {fileID: 3329178587608074735, guid: 5ded61034b835224a845612b9a66ef28, type: 3}
-  PoliceRight: {fileID: 5469149455939838666, guid: 171bf5ffae3f23345b6f4de45813bd2d, type: 3}
+  PoliceRight: {fileID: 6787225166571733836, guid: 171bf5ffae3f23345b6f4de45813bd2d, type: 3}
   Player: {fileID: 5754294691038925881}
   Angel: {fileID: 585339913}
   Text: {fileID: 140196825}
