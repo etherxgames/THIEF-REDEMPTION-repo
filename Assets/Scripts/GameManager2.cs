@@ -16,8 +16,6 @@ public class GameManager2 : MonoBehaviour
     public GameObject win;
     public bool won;
     public GameObject textMeshPro;
-    public GameObject map;
-    public bool mapActive = false;
     
     void Start()
     {
@@ -28,7 +26,6 @@ public class GameManager2 : MonoBehaviour
         win.SetActive(false);
         Invoke("deletemesh", 10f);
         Invoke("SpawnPolice", 40f);
-        map.SetActive(false);
     }
     void deletemesh()
     {
@@ -52,12 +49,6 @@ public class GameManager2 : MonoBehaviour
                 win.SetActive(true);
                 Invoke("NextScene", 5f);
             }
-        }
-        if (Input.GetKeyDown(KeyCode.M) && !PlayerHealth.isDead)
-        {
-            map.SetActive(!mapActive);
-            mapActive = !mapActive;
-            Time.timeScale = 0f;
         }
     }
     public void SpawnPolice()
