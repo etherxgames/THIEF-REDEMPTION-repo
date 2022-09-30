@@ -35,18 +35,6 @@ public class PlayerController : MonoBehaviour
         {
             Flip();
         }
-    }
-
-    void FixedUpdate()
-    {
-        if (isGrounded)
-        {
-            _rb.velocity = new Vector2(move * _playerSpeed, _rb.velocity.y);
-        }
-        else _rb.velocity = new Vector2(move * _playerSpeed / 1.7f, _rb.velocity.y);
-
-
-
         if (isGrounded && Input.GetButtonDown("Jump"))
         {
             _rb.AddForce(new Vector2(0f, _jumpPower), ForceMode2D.Impulse);
@@ -57,6 +45,15 @@ public class PlayerController : MonoBehaviour
             _rb.gravityScale = 20f;
         }
         else _rb.gravityScale = 12f;
+    }
+
+    void FixedUpdate()
+    {
+        if (isGrounded)
+        {
+            _rb.velocity = new Vector2(move * _playerSpeed, _rb.velocity.y);
+        }
+        else _rb.velocity = new Vector2(move * _playerSpeed / 1.7f, _rb.velocity.y);
     }
     void Flip()
     {

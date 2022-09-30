@@ -7512,6 +7512,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player_Knight
       objectReference: {fileID: 0}
+    - target: {fileID: 59105165945350116, guid: ac5d0fbc881720a4391b45b57e0eac5a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 59105165945350118, guid: ac5d0fbc881720a4391b45b57e0eac5a, type: 3}
       propertyPath: m_Size.y
       value: 5.6
@@ -9277,11 +9281,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1676275317578853126, guid: b60f02a1ad7309445afeea01e091bc0d, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 146.261
+      value: 146.26099
       objectReference: {fileID: 0}
     - target: {fileID: 1676275317578853126, guid: b60f02a1ad7309445afeea01e091bc0d, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -45.386
+      value: -45.385986
       objectReference: {fileID: 0}
     - target: {fileID: 1676275317578853126, guid: b60f02a1ad7309445afeea01e091bc0d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
