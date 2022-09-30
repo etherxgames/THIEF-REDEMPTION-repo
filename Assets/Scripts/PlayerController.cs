@@ -9,8 +9,8 @@ public class PlayerController : MonoBehaviour
     bool isGrounded;
     public Animator _animate;
     Rigidbody2D _rb;
-    public float _playerSpeed = 1800f;
-    public float _jumpPower = 500f;
+    public float _playerSpeed = 55f;
+    public float _jumpPower = 510f;
 
 
     void Start()
@@ -25,18 +25,7 @@ public class PlayerController : MonoBehaviour
     {
         move = Input.GetAxisRaw("Horizontal");
         _animate.SetFloat("Walk", System.Math.Abs(move));
-        if (isGrounded)
-        {
-            _rb.velocity = new Vector2((move * _playerSpeed * Time.deltaTime), _rb.velocity.y);
-        }
-        else _rb.velocity = new Vector2(((move * _playerSpeed / 1.3f) * Time.deltaTime), _rb.velocity.y);
-
-
-        if (isGrounded && Input.GetButtonDown("Jump"))
-        {
-            _rb.AddForce(new Vector2(0f, _jumpPower), ForceMode2D.Impulse);
-
-        }
+        
 
         if (move > 0f && !facingright)
         {
@@ -50,6 +39,19 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (isGrounded)
+        {
+            _rb.velocity = new Vector2(move * _playerSpeed, _rb.velocity.y);
+        }
+        else _rb.velocity = new Vector2(move * _playerSpeed / 1.7f, _rb.velocity.y);
+
+
+
+        if (isGrounded && Input.GetButtonDown("Jump"))
+        {
+            _rb.AddForce(new Vector2(0f, _jumpPower), ForceMode2D.Impulse);
+
+        }
         if (_rb.velocity.y < 0f && !isGrounded)
         {
             _rb.gravityScale = 20f;

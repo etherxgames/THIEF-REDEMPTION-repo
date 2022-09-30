@@ -1409,6 +1409,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 3329178587608074729, guid: 5ded61034b835224a845612b9a66ef28, type: 3}
+      propertyPath: m_Mass
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: 3329178587608074733, guid: 5ded61034b835224a845612b9a66ef28, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -2265,6 +2269,14 @@ PrefabInstance:
     - target: {fileID: 870792731352213973, guid: 301f5f5e3d3bec84f8a8f5571edd1d12, type: 3}
       propertyPath: m_Name
       value: Player_Thief
+      objectReference: {fileID: 0}
+    - target: {fileID: 870792731352213980, guid: 301f5f5e3d3bec84f8a8f5571edd1d12, type: 3}
+      propertyPath: _jumpPower
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 870792731352213980, guid: 301f5f5e3d3bec84f8a8f5571edd1d12, type: 3}
+      propertyPath: _playerSpeed
+      value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 870792731352213981, guid: 301f5f5e3d3bec84f8a8f5571edd1d12, type: 3}
       propertyPath: healthBar
