@@ -25,6 +25,12 @@ public class PlayerHealth : MonoBehaviour
     {
         if (currentHealth <= 0)
             isDead = true;
+        if (healthORB.healthOrbTaken)
+        {
+            currentHealth = maxHealth;
+            healthBar.UpdateHealth(currentHealth);
+            healthORB.healthOrbTaken = false;
+        }
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
@@ -34,5 +40,4 @@ public class PlayerHealth : MonoBehaviour
             _rb.AddForce(new Vector2(-30f, 300f), ForceMode2D.Impulse);
         }
     }
-
 }
